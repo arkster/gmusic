@@ -30,14 +30,11 @@ class QueryUsingPandas(object):
             if not self.name:
                 self.name = ''.join(['Alt-Radio-Station-', datetime.datetime.now().strftime('%m%d%Y%H%M%S%f')])
 
-
-
     def load_and_save_pandas_dataframe(self, load_or_save=None, dataframe=None):
         if load_or_save == 'load':
             return pd.read_json(self.google_music_json_file)
         elif load_or_save == 'save':
             dataframe.to_json(self.google_music_json_file)
-
 
     @classmethod
     def check_song_in_pandas_dataframe(self, dataframe, artist, song):
