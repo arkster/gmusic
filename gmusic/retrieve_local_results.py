@@ -18,7 +18,6 @@ class QueryUsingPandas(object):
     This module provides some helper functions for accessing title, artist info from a Pandas DF
     """
 
-    #def __init__(self, name=None, google_music_json_file=None):
     def __init__(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
